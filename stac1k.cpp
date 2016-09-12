@@ -81,8 +81,8 @@ count_(sqr.count_) {
 
 template<class T>// оператор присваивания 
 inline stack<T> & stack<T>::operator=(stack const & sqr)  {
-	assert(this != &sqr);
-		(stack(sqr)).swap(*this);
+if(this != &sqr){
+		(stack(sqr)).swap(*this);}
 	return *this;
 }
 
@@ -94,7 +94,7 @@ swap(sqr.count_, count_);
 }
 
 int main() {
-	stack <int> obj;
+	stack <int> obj; 
 
 	obj.push(1);
 	obj.push(2);

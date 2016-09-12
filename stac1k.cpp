@@ -46,7 +46,8 @@ inline void stack<T>::push(T const & value) {
 	{
 		array_size_ *= 2;
 		T * bal = new T[array_size_];
-		memcpy(bal, array_, array_size_ * sizeof(T));
+		copy(array_, array_size_ * sizeof(T), bal
+		);
 		delete[] array_;
 
 		array_ = bal;

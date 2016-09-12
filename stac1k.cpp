@@ -46,7 +46,7 @@ inline void stack<T>::push(T const & value) {
 	{
 		array_size_ *= 2;
 		T * bal = new T[array_size_];
-		copy(array_, array_size_ * sizeof(T), bal
+		copy(array_, array_size_ + array_, bal
 		);
 		delete[] array_;
 
